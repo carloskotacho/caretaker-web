@@ -1,4 +1,9 @@
-## Caretaker Web
+<a href="https://github.com/carloskotacho/caretaker-web/blob/master/LICENSE">
+    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=informational" height="18"/>
+</a>
+<a href="https://david-dm.org/carloskotacho/caretaker-web" title="dependencies status">
+  <img src="https://david-dm.org/carloskotacho/caretaker-web/status.svg" height="18"/>
+</a>
 
 ### Libs
 
