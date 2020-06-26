@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { TabViewModule } from 'primeng/tabview';
-
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
 
-    TabViewModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
