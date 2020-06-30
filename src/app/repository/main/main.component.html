@@ -26,10 +26,10 @@
                 </div>
             </p-header>
             <ng-template let-repositories pTemplate="item">
-              <div class="repositories-details">
-                <img style="float: left;" class="repository-item-image" src="" />
+              <div class="repository-details">
+                <img style="float: left;" class="repository-item-image" src="{{ repositories.owner.avatar_url }}"/>
                 <div>
-                  <a href="#">{{ repositories.fullName }}</a>
+                  <a href="#">{{ repositories.full_name }}</a>
                   <p>{{ repositories.description }}</p>
                 </div>
               </div>
