@@ -6,9 +6,10 @@
           <span class="title">Repositories</span>
         </div>
         <div class="p-col-12">
-          <form action="" class="p-grid">
+          <form class="p-grid" autocomplete="off" (ngSubmit)="search()">
             <div class="p-col-11 p-md-4">
-              <input type="text" pInputText placeholder="Add repository" />
+              <input type="text" pInputText placeholder="Add repository" name="search"
+                [(ngModel)]="filter.search" />
             </div>
             <div class="p-col-1">
               <button pButton type="submit" icon="pi pi-plus"></button>
@@ -24,12 +25,12 @@
                     </div>
                 </div>
             </p-header>
-            <ng-template let-repository pTemplate="item" let-i="index">
-              <div class="repository-details">
-                <img style="float: left;" class="repository-item-image" src="assets/images/{{repository.avatar}}.svg">
+            <ng-template let-repositories pTemplate="item">
+              <div class="repositories-details">
+                <img style="float: left;" class="repository-item-image" src="" />
                 <div>
-                  <a href="#">{{ repository.name }}</a>
-                  <p>{{ repository.description }}</p>
+                  <a href="#">{{ repositories.fullName }}</a>
+                  <p>{{ repositories.description }}</p>
                 </div>
               </div>
             </ng-template>

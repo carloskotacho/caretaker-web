@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { RepositoryService } from '../repository/repository.service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   exports: [
     NavbarComponent
   ],
-  providers: []
+  providers: [
+    RepositoryService,
+  ]
 })
 export class CoreModule { }

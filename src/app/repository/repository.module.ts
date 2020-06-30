@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,6 +12,7 @@ import { RepositoryComponent } from './repository/repository.component';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
 
     InputTextModule,
     ButtonModule,
@@ -23,7 +25,6 @@ import { RepositoryComponent } from './repository/repository.component';
   exports: [
     MainComponent,
     RepositoryComponent
-  ],
-  providers: []
+  ]
 })
 export class RepositoryModule { }
