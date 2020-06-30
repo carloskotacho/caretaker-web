@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent {
 
   repositories = [
-    { name: 'angular/components',
+    { avatar: 'angular', name: 'angular/components',
       description: 'Component infrastructure and Material Design components for Angular ' },
-    { name: 'spring-projects/spring-boot',
+    { avatar: 'spring', name: 'spring-projects/spring-boot',
       description: 'Spring Boot' },
-    { name: 'facebook/react',
+    { avatar: 'facebook', name: 'facebook/react',
       description: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.' },
   ];
 

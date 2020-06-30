@@ -7,7 +7,7 @@
         </div>
         <div class="p-col-12">
           <form action="" class="p-grid">
-            <div class="p-col-11">
+            <div class="p-col-11 p-md-4">
               <input type="text" pInputText placeholder="Add repository" />
             </div>
             <div class="p-col-1">
@@ -15,8 +15,25 @@
             </div>
           </form>
         </div>
-        <div class="p-col-12 p-md-6">
-          <!--img src="https://picsum.photos/202" style="width:100%"-->
+        <div class="p-col-12 p-md-12">
+          <p-virtualScroller [value]="repositories" scrollHeight="500px" [itemSize]="80">
+            <p-header>
+                <div class="list-header">
+                    <div class="title-container">
+                        Added repositories
+                    </div>
+                </div>
+            </p-header>
+            <ng-template let-repository pTemplate="item" let-i="index">
+              <div class="repository-details">
+                <img style="float: left;" class="repository-item-image" src="assets/images/{{repository.avatar}}.svg">
+                <div>
+                  <a href="#">{{ repository.name }}</a>
+                  <p>{{ repository.description }}</p>
+                </div>
+              </div>
+            </ng-template>
+          </p-virtualScroller>
         </div>
     </div>
   </div>
@@ -38,5 +55,21 @@
       <button pButton type="submit" icon="pi pi-plus"></button>
     </div>
   </form>
+
+-->
+
+
+<!--
+
+                  <div class="repository-details">
+                    <div style="float: left;">
+                        <img style="float: left;" class="repository-item-image" src="assets/images/{{repository.avatar}}.svg" width="35">
+                        <div>
+                            <b>{{ repository.name }}</b>
+                            <div>{{ repository.description }}</div>
+                        </div>
+                    </div>
+                    <a href="#">View PRs</a>
+                </div>
 
 -->
