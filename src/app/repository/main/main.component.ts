@@ -23,7 +23,6 @@ export class MainComponent implements OnInit {
         this.repositories.push(repository);
 
         console.log(this.repositories);
-        console.log('full name: ', this.repositories['full_name']);
       });
   }
 

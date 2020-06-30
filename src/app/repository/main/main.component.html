@@ -25,12 +25,12 @@
                     </div>
                 </div>
             </p-header>
-            <ng-template let-repositories pTemplate="item">
+            <ng-template let-repository pTemplate="item" let-i="index">
               <div class="repository-details">
-                <img style="float: left;" class="repository-item-image" src="{{ repositories.owner.avatar_url }}"/>
+                <img style="float: left;" class="repository-item-image" src="{{ repository.owner.avatar_url }}"/>
                 <div>
-                  <a href="#">{{ repositories.full_name }}</a>
-                  <p>{{ repositories.description }}</p>
+                  <a href="#">{{ repository.full_name }}</a>
+                  <p>{{ repository.description }}</p>
                 </div>
               </div>
             </ng-template>
@@ -39,38 +39,3 @@
     </div>
   </div>
 </div>
-
-<!--
-  <div class="ui-g ui-fluid">
-    <div class="ui-g-12">
-      <span class="title">Repositories</span>
-    </div>
-  </div>
-
-  <form action="" class="ui-g ui-fluid">
-    <div class="ui-g-11 ui-md-3">
-      <input type="text" pInputText placeholder="Add repository" />
-    </div>
-
-    <div class="ui-g-1 ui-md-9">
-      <button pButton type="submit" icon="pi pi-plus"></button>
-    </div>
-  </form>
-
--->
-
-
-<!--
-
-                  <div class="repository-details">
-                    <div style="float: left;">
-                        <img style="float: left;" class="repository-item-image" src="assets/images/{{repository.avatar}}.svg" width="35">
-                        <div>
-                            <b>{{ repository.name }}</b>
-                            <div>{{ repository.description }}</div>
-                        </div>
-                    </div>
-                    <a href="#">View PRs</a>
-                </div>
-
--->
