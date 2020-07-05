@@ -8,11 +8,11 @@
         <div class="p-col-12">
           <form class="p-grid" autocomplete="off" (ngSubmit)="add()">
             <div class="p-col-11 p-md-4">
-              <input type="text" pInputText placeholder="Add repository" name="add"
+              <input type="text" pInputText placeholder="user/repository" name="add"
                 [(ngModel)]="filter.fullName" />
             </div>
             <div class="p-col-1">
-              <button pButton type="submit" icon="pi pi-plus"></button>
+              <button pButton type="submit" icon="pi pi-plus" pTooltip="Add repository"></button>
             </div>
           </form>
         </div>
@@ -24,6 +24,10 @@
                 <div>
                   <a href="#">{{ repo.fullName }}</a>
                   <p>{{ repo.description }}</p>
+                  <p>
+                    <a href="#" style="margin-right: 1em;">issues</a>
+                    <a href="#">pull requests</a>
+                  </p>
                 </div>
               </div>
             </ng-template>

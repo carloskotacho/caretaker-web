@@ -32,3 +32,8 @@
   font-size: 12px;
   color: #999;
 }
+
+.repository-details p a {
+  color: #999;
+  text-decoration: underline;
+}
