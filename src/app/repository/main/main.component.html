@@ -6,10 +6,10 @@
           <span class="title">Repositories</span>
         </div>
         <div class="p-col-12">
-          <form class="p-grid" autocomplete="off" (ngSubmit)="search()">
+          <form class="p-grid" autocomplete="off" (ngSubmit)="add()">
             <div class="p-col-11 p-md-4">
-              <input type="text" pInputText placeholder="Add repository" name="search"
-                [(ngModel)]="filter.search" />
+              <input type="text" pInputText placeholder="Add repository" name="add"
+                [(ngModel)]="filter.fullName" />
             </div>
             <div class="p-col-1">
               <button pButton type="submit" icon="pi pi-plus"></button>
@@ -17,25 +17,18 @@
           </form>
         </div>
         <div class="p-col-12 p-md-12">
-          <p-virtualScroller [value]="repositories" scrollHeight="500px" [itemSize]="80">
-            <p-header>
-                <div class="list-header">
-                    <div class="title-container">
-                        Added repositories
-                    </div>
-                </div>
-            </p-header>
-            <ng-template let-repository pTemplate="item" let-i="index">
-              <div class="repository-details">
-                <img style="float: left;" class="repository-item-image" src="{{ repository.owner.avatar_url }}"/>
+          <p-dataView [value]="repositories">
+            <ng-template let-repo pTemplate="listItem">
+              <div class="repository-details p-col-12">
+                <img style="float: left;" class="repository-item-image" src="{{ repo.avatarUrl }}"/>
                 <div>
-                  <a href="#">{{ repository.full_name }}</a>
-                  <p>{{ repository.description }}</p>
+                  <a href="#">{{ repo.fullName }}</a>
+                  <p>{{ repo.description }}</p>
                 </div>
               </div>
             </ng-template>
-          </p-virtualScroller>
+          </p-dataView>
         </div>
+      </div>
     </div>
   </div>
-</div>

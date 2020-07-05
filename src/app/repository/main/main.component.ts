@@ -14,16 +14,34 @@ export class MainComponent implements OnInit {
   constructor(private repositoryService: RepositoryService) {}
 
   ngOnInit() {
-    // this.search();
+    this.findAll();
   }
 
-  search() {
-    this.repositoryService.search(this.filter)
+  add() {
+    this.repositoryService.add(this.filter)
       .then(repository => {
-        this.repositories.push(repository);
 
-        console.log(this.repositories);
+        const infoRepo = {
+          avatarUrl: repository.owner.avatar_url,
+          fullName: repository.full_name,
+          description:repository.description
+        };
+
+        this.repositories.push(infoRepo);
+
+        this.save(this.repositories);
       });
   }
 
+  save(repositories: any[]) {
+    localStorage.setItem('infoRepo', JSON.stringify(repositories));
+  }
+
+  findAll() {
+    const infoRepo = localStorage.getItem('infoRepo');
+
+    if (infoRepo) {
+      this.repositories = JSON.parse(infoRepo);
+    }
+  }
 }

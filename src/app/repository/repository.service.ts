@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
 
 export class RepositoryFilter {
-  search: string;
+  fullName: string;
 }
 
 @Injectable({
@@ -18,9 +18,9 @@ export class RepositoryService {
     this.repositoryUrl = `${environment.apiUrl}/repos`;
   }
 
-  search(filter: RepositoryFilter): Promise<any> {
+  add(filter: RepositoryFilter): Promise<any> {
 
-    return this.http.get(`${this.repositoryUrl}/${filter.search}`)
+    return this.http.get(`${this.repositoryUrl}/${filter.fullName}`)
       .toPromise()
       .then(response => response.json());
   }
