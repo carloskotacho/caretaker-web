@@ -43,3 +43,7 @@ label{
     margin: 0 auto;
   }
 }
+
+body .ui-dataview .ui-dataview-header {
+  display: none;
+}
