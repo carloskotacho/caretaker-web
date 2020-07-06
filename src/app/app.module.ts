@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { RepositoryModule } from './repository/repository.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RepositoryModule } from './repository/repository.module';
     HttpModule,
 
     CoreModule,
-    RepositoryModule
+    RepositoryModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

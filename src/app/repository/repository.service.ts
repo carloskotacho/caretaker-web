@@ -29,3 +29,6 @@ export class RepositoryService {
 
 // https://api.github.com/repos/angular/components
 // /repos/:owner/:repo
+
+// https://api.github.com/repos/angular/components/pulls
+// /repos/:owner/:repo/pulls

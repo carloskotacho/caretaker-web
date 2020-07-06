@@ -25,8 +25,7 @@
                   <a href="{{ repo.htmlUrl }}">{{ repo.fullName }}</a>
                   <p>{{ repo.description }}</p>
                   <p>
-                    <a href="#" style="margin-right: 1em;">issues</a>
-                    <a href="#">pull requests</a>
+                    <a [routerLink]="['/repos', repo.fullName]">pull requests</a>
                   </p>
                 </div>
               </div>

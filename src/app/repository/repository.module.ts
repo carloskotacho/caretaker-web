@@ -9,6 +9,7 @@ import { TooltipModule } from 'primeng/tooltip';
 
 import { MainComponent } from './main/main.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { RepositoryRoutingModule } from './repository-routing.module';
 
 @NgModule({
   imports: [
@@ -18,7 +19,9 @@ import { RepositoryComponent } from './repository/repository.component';
     InputTextModule,
     ButtonModule,
     DataViewModule,
-    TooltipModule
+    TooltipModule,
+
+    RepositoryRoutingModule
   ],
   declarations: [
     MainComponent,
