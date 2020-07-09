@@ -25,7 +25,9 @@ export class MainComponent implements OnInit {
           avatarUrl: repository.owner.avatar_url,
           fullName: repository.full_name,
           description:repository.description,
-          htmlUrl: repository.html_url
+          htmlUrl: repository.html_url,
+          login: repository.login,
+          name: repository.name,
         };
 
         this.repositories.push(infoRepo);

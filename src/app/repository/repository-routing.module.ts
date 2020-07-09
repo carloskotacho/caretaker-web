@@ -10,7 +10,7 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: ':fullname',
+    path: ':login/:name/pulls',
     component: RepositoryComponent,
   },
 ];
