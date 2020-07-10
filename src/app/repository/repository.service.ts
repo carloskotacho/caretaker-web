@@ -5,6 +5,8 @@ import { environment } from '../../environments/environment';
 
 export class RepositoryFilter {
   fullName: string;
+  login: string;
+  name: string;
 }
 
 @Injectable({
@@ -24,8 +26,14 @@ export class RepositoryService {
       .toPromise()
       .then(response => response.json());
   }
-}
 
+  findAllPrs(filter: RepositoryFilter): Promise<any> {
+
+    return this.http.get(`${this.repositoryUrl}/${filter.login}/${filter.name}/pulls`)
+      .toPromise()
+      .then(response => response.json());
+  }
+}
 
 // https://api.github.com/repos/angular/components
 // /repos/:owner/:repo

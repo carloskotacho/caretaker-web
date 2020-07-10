@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RepositoryService, RepositoryFilter } from '../repository.service';
 
 @Component({
   selector: 'app-repository',
@@ -8,16 +9,41 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RepositoryComponent implements OnInit {
 
+  filter = new RepositoryFilter();
   loginRepo: string;
   nameRepo: string;
+  prs = [];
 
   constructor(
+    private repositoryService: RepositoryService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.loginRepo = this.route.snapshot.params['login'];
     this.nameRepo = this.route.snapshot.params['name'];
+
+    this.filter.login = this.loginRepo;
+    this.filter.name = this.nameRepo;
+
+    this.findAllPrs();
+  }
+
+  findAllPrs() {
+    this.repositoryService.findAllPrs(this.filter)
+      .then(prs => {
+
+        prs.forEach(pr => {
+
+          const infoPr = {
+            title: pr.title,
+          };
+
+          this.prs.push(infoPr);
+        });
+
+        console.log('INFO PRS', this.prs);
+      });
   }
 
 }
