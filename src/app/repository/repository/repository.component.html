@@ -9,6 +9,18 @@
         </a>
       </div>
 
+      <div class="p-col-12 p-md-12">
+        <p-dataView [value]="prs">
+          <ng-template let-pr pTemplate="listItem">
+            <div class="pr-details p-col-12">
+              <div>
+                <a href="{{ pr.htmlUrl }}">{{ pr.title }}</a>
+                <p>#{{ pr.number }} by {{ pr.userLogin }}</p>
+              </div>
+            </div>
+          </ng-template>
+        </p-dataView>
+      </div>
     </div>
   </div>
 </div>

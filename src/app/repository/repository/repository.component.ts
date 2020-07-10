@@ -37,12 +37,13 @@ export class RepositoryComponent implements OnInit {
 
           const infoPr = {
             title: pr.title,
+            htmlUrl: pr.html_url,
+            number: pr.number,
+            userLogin: pr.user.login
           };
 
           this.prs.push(infoPr);
         });
-
-        console.log('INFO PRS', this.prs);
       });
   }
 

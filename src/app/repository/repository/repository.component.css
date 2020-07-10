@@ -1,0 +1,24 @@
+.pr-details {
+  display: flex;
+  padding: 15px 10px;
+}
+
+.pr-details div {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.pr-details div a {
+  text-decoration: none;
+  color: #333;
+}
+
+.pr-details div a:hover{
+  color: #146FD7;
+}
+
+.pr-details div p {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
