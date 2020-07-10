@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-repository',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoryComponent implements OnInit {
 
-  constructor() { }
+  loginRepo: string;
+  nameRepo: string;
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit() {
+    this.loginRepo = this.route.snapshot.params['login'];
+    this.nameRepo = this.route.snapshot.params['name'];
   }
 
 }
