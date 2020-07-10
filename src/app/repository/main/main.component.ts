@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
           fullName: repository.full_name,
           description:repository.description,
           htmlUrl: repository.html_url,
-          login: repository.login,
+          login: repository.owner.login,
           name: repository.name,
         };
 
