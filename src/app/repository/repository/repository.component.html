@@ -15,6 +15,7 @@
             <div class="pr-details p-col-12">
               <div>
                 <a href="{{ pr.htmlUrl }}">{{ pr.title }}</a>
+                <span *ngFor="let label of pr.labelsPr" [ngStyle]="{'background': label.color}">{{ label.name }}</span>
                 <p>#{{ pr.number }} by {{ pr.userLogin }}</p>
               </div>
             </div>

@@ -35,11 +35,25 @@ export class RepositoryComponent implements OnInit {
 
         prs.forEach(pr => {
 
+          const labels = [];
+
+          pr.labels.forEach(label => {
+
+            const infoLabel = {
+              name: label.name,
+              color: '#' + label.color,
+              url: label.url,
+            }
+
+            labels.push(infoLabel);
+          });
+
           const infoPr = {
             title: pr.title,
             htmlUrl: pr.html_url,
             number: pr.number,
-            userLogin: pr.user.login
+            userLogin: pr.user.login,
+            labelsPr: labels
           };
 
           this.prs.push(infoPr);
