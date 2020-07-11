@@ -10,7 +10,8 @@
       </div>
 
       <div class="p-col-12 p-md-12">
-        <p-dataView [value]="prs">
+        <p-dataView [value]="prs" [paginator]="true" [rows]="filter.itemsByPage"
+        [lazy]="true" [totalRecords]="totalPrs" (onLazyLoad)="whenChangingPage($event)">
           <ng-template let-pr pTemplate="listItem">
             <div class="pr-details p-col-12">
               <div>

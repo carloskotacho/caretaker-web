@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RepositoryService, RepositoryFilter } from '../repository.service';
 
+import { LazyLoadEvent } from 'primeng/api';
+
 @Component({
   selector: 'app-repository',
   templateUrl: './repository.component.html',
@@ -9,6 +11,7 @@ import { RepositoryService, RepositoryFilter } from '../repository.service';
 })
 export class RepositoryComponent implements OnInit {
 
+  totalPrs = 0;
   filter = new RepositoryFilter();
   loginRepo: string;
   nameRepo: string;
@@ -29,36 +32,21 @@ export class RepositoryComponent implements OnInit {
     this.findAllPrs();
   }
 
-  findAllPrs() {
+  findAllPrs(page = 1) {
+    this.filter.page = page;
+
     this.repositoryService.findAllPrs(this.filter)
       .then(prs => {
+        this.totalPrs = prs.totalPrs;
+        this.prs = prs.results;
 
-        prs.forEach(pr => {
-
-          const labels = [];
-
-          pr.labels.forEach(label => {
-
-            const infoLabel = {
-              name: label.name,
-              color: '#' + label.color,
-              url: label.url,
-            }
-
-            labels.push(infoLabel);
-          });
-
-          const infoPr = {
-            title: pr.title,
-            htmlUrl: pr.html_url,
-            number: pr.number,
-            userLogin: pr.user.login,
-            labelsPr: labels
-          };
-
-          this.prs.push(infoPr);
-        });
+        console.log('Total: ', this.totalPrs);
       });
+  }
+
+  whenChangingPage(event: LazyLoadEvent) {
+    const page = (event.first / event.rows) + 1;
+    this.findAllPrs(page);
   }
 
 }
