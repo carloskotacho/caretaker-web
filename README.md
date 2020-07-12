@@ -1,3 +1,5 @@
+# ![caretaker](https://user-images.githubusercontent.com/22691244/87238107-a95aba80-c3d4-11ea-9da9-60100d5b3a7d.png)
+
 <a href="https://github.com/carloskotacho/caretaker-web/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/carloskotacho/caretaker-web?color=006699&style=for-the-badge"/>
 </a>
