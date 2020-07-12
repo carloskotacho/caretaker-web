@@ -8,13 +8,17 @@
     <img src="https://img.shields.io/static/v1?label=depend%C3%AAncias&message=prod&color=006699&style=for-the-badge"/>
 </a>
 
-<a href="#">
-    <img src="https://img.shields.io/static/v1?label=deploy&message=off&color=FF5A5F&style=for-the-badge"/>
+<a href="https://caretaker-v1.herokuapp.com/repos">
+    <img src="https://img.shields.io/static/v1?label=deploy&message=on&color=00A699&style=for-the-badge"/>
 </a>
 
 ### Objetivo
 
 Consumir a [API do Github](https://developer.github.com/v3/).
+
+### Deploy
+
+Deploy feito no [Heroku](https://heroku.com).
 
 ### Prévia
 
