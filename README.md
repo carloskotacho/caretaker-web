@@ -9,7 +9,7 @@
 </a>
 
 <a href="https://caretaker-v1.herokuapp.com/repos">
-    <img src="https://img.shields.io/github/deployments/carloskotacho/caretaker-web/caretaker-v1?color=00A699&label=deploy&style=for-the-badge"/>
+    <img src="https://img.shields.io/github/deployments/carloskotacho/caretaker-web/caretaker-v1?color=00A699&label=deploy&style=for-the-badge&logo=heroku"/>
 </a>
 
 ### Objetivo
