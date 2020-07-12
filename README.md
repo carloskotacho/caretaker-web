@@ -5,24 +5,41 @@
   <img src="https://david-dm.org/carloskotacho/caretaker-web/status.svg" height="18"/>
 </a>
 
-### Objective
+### Objetivo
+
+Consumir a [API do Github](https://developer.github.com/v3/).
 
 ### Deploy
 
-### Releases
+### Prévia
 
-### Showcase
+![tela1a](https://user-images.githubusercontent.com/22691244/87237586-8d541a80-c3ce-11ea-8ebe-fd44d0c356c1.png)
 
-### Running
+![tela2a](https://user-images.githubusercontent.com/22691244/87237567-53831400-c3ce-11ea-8894-721c3f15f0d8.png)
 
-### Usage
+### Como executar
 
-### Libs
+```
+# Clone o repositório
+$ git clone git@github.com:carloskotacho/caretaker-web.git
 
-- [primeng-v9.1.0](https://primefaces.org/primeng/showcase/#/setup)
-- [material-icons](https://material-ui.com/pt/getting-started/installation/)
+# Dentro da pasta do projeto, instale as dependências
+$ npm install
 
-### Contributing
+# Execute o projeto
+$ npm start
+
+# Acessando...
+# http://localhost:4200
+```
+
+### Bibliotecas
+
+- Principais
+  - [primeng-v9.1.0](https://primefaces.org/primeng/showcase/#/setup)
+  - [material-icons](https://material-ui.com/pt/getting-started/installation/)
+
+### Contribuindo
 
 [![0](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/images/0)](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/links/0)
 [![1](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/images/1)](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/links/1)
@@ -33,6 +50,8 @@
 [![6](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/images/6)](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/links/6)
 [![7](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/images/7)](https://sourcerer.io/fame/carloskotacho/carloskotacho/caretaker-web/links/7)
 
-### License
+### Licença
 
-Caretaker is under the MIT license. See the [LICENSE](https://github.com/carloskotacho/caretaker-web/blob/master/LICENSE) for more information.
+Caretaker está sob licença MIT. Veja [LICENSE](https://github.com/carloskotacho/caretaker-web/blob/master/LICENSE) para mais informações.
+
+© Carlos Henrique 🚀

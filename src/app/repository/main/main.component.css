@@ -24,7 +24,7 @@
 }
 
 .repository-details div a:hover{
-  color: #146FD7;
+  color: #006699;
 }
 
 .repository-details div p {
@@ -36,4 +36,9 @@
 .repository-details p a {
   color: #999;
   text-decoration: underline;
+}
+
+button{
+  background-color: #006699;
+  border-color: #006699;
 }

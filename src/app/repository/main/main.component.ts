@@ -37,7 +37,8 @@ export class MainComponent implements OnInit {
   }
 
   save(repositories: any[]) {
-    localStorage.setItem('infoRepo', JSON.stringify(repositories));
+    const repoReverse = this.repositories.reverse();
+    localStorage.setItem('infoRepo', JSON.stringify(repoReverse));
   }
 
   findAll() {

@@ -8,7 +8,7 @@ export class RepositoryFilter {
   login: string;
   name: string;
   page = 1;
-  itemsByPage = 30;
+  itemsByPage = 8;
 }
 
 @Injectable({
@@ -70,7 +70,7 @@ export class RepositoryService {
 
         const result = {
           results,
-          totalPrs: prs.number,
+          totalPrs: 1000, // TODO: total prs / prs.length
         };
 
         return result;

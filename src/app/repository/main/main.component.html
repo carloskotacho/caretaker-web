@@ -6,13 +6,13 @@
           <span class="title">Repositories</span>
         </div>
         <div class="p-col-12">
-          <form class="p-grid" autocomplete="off" (ngSubmit)="add()">
+          <form #f="ngForm" class="p-grid" autocomplete="off" (ngSubmit)="add()">
             <div class="p-col-11 p-md-4">
               <input type="text" pInputText placeholder="user/repository" name="add"
-                [(ngModel)]="filter.fullName" />
+                [(ngModel)]="filter.fullName" required />
             </div>
             <div class="p-col-1">
-              <button pButton type="submit" icon="pi pi-plus" pTooltip="Add repository"></button>
+              <button pButton type="submit" icon="pi pi-plus" pTooltip="Add repository" [disabled]="f.invalid"></button>
             </div>
           </form>
         </div>

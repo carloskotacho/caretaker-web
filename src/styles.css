@@ -50,6 +50,10 @@ label{
   }
 }
 
-body .ui-dataview .ui-dataview-header {
+body .content .ui-dataview .ui-dataview-header {
   display: none;
+}
+
+body .content .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+  background-color: #006699;
 }
