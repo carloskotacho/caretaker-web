@@ -1,8 +1,13 @@
 <a href="https://github.com/carloskotacho/caretaker-web/blob/master/LICENSE">
-    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=informational" height="18"/>
+    <img src="https://img.shields.io/github/license/carloskotacho/caretaker-web?color=006699&style=for-the-badge"/>
 </a>
-<a href="https://david-dm.org/carloskotacho/caretaker-web" title="dependencies status">
-  <img src="https://david-dm.org/carloskotacho/caretaker-web/status.svg" height="18"/>
+
+<a href="https://david-dm.org/carloskotacho/caretaker-web">
+    <img src="https://img.shields.io/static/v1?label=depend%C3%AAncias&message=prod&color=006699&style=for-the-badge"/>
+</a>
+
+<a href="#">
+    <img src="https://img.shields.io/static/v1?label=deploy&message=🚀&color=006699&style=for-the-badge"/>
 </a>
 
 ### Objetivo
