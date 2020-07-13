@@ -26,7 +26,20 @@ export class RepositoryService {
 
     return this.http.get(`${this.repositoryUrl}/${filter.fullName}`)
       .toPromise()
-      .then(response => response.json());
+      .then(response => {
+        const repos = response.json();
+
+        const infoRepo = {
+          avatarUrl: repos.owner.avatar_url,
+          fullName: repos.full_name,
+          description:repos.description,
+          htmlUrl: repos.html_url,
+          login: repos.owner.login,
+          name: repos.name,
+        };
+
+        return infoRepo;
+      });
   }
 
   findAllPrs(filter: RepositoryFilter): Promise<any> {

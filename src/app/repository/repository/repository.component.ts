@@ -39,8 +39,6 @@ export class RepositoryComponent implements OnInit {
       .then(prs => {
         this.totalPrs = prs.totalPrs;
         this.prs = prs.results;
-
-        console.log('Total: ', this.totalPrs);
       });
   }
 

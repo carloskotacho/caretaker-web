@@ -20,18 +20,7 @@ export class MainComponent implements OnInit {
   add() {
     this.repositoryService.add(this.filter)
       .then(repository => {
-
-        const infoRepo = {
-          avatarUrl: repository.owner.avatar_url,
-          fullName: repository.full_name,
-          description:repository.description,
-          htmlUrl: repository.html_url,
-          login: repository.owner.login,
-          name: repository.name,
-        };
-
-        this.repositories.push(infoRepo);
-
+        this.repositories.push(repository);
         this.save(this.repositories);
       });
   }
